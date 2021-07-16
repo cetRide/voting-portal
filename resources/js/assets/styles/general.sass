@@ -1,0 +1,402 @@
+//navigation bar
+@import "mixins"
+@import "variables"
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link:focus
+    box-shadow: none !important
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link a
+    text-decoration: none !important
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link
+    border-color: $secondary-color !important
+    color: $secondary-color !important
+    text-decoration: none !important
+.image-cont
+    @include center-hor-ver
+    margin-bottom: 5px
+    img
+        object-fit: contain
+        max-height: 330px
+        max-width: 330px
+        border-radius: 5px
+.bg-shadow
+    background: rgba(255, 255, 255, 0.5)
+    position: fixed
+    width: 100%
+    z-index: 2
+    top: 24px
+.second-nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 80px
+    transition: top 0.3s
+
+    .left-items
+        @include center-hor-ver
+
+        img
+            height: 44.5px
+            width: 123px
+
+    .right-items
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .toggle-text
+            display: none
+            font-weight: 500
+            color: gray
+            font-size: 17px
+
+        .item
+            cursor: pointer
+
+            a
+                text-decoration: none
+                color: $secondary-color
+                cursor: pointer
+
+                &:hover
+                    color: $primary-color
+            font-size: 15px
+            padding: 0.6rem 20px 0.3rem
+            color: $secondary-color
+            font-weight: 600
+            @include center-hor-ver
+
+            &:hover
+                color: $primary-color
+
+.slim-nav
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+    .item
+        display: flex
+        align-items: center
+        font-weight: 600
+
+        desc
+            margin-right: 5px
+//hr .solid
+//    border-top: 3px solid #bbb
+.footer
+    background-color: #e6e6e6
+    color: black
+    font-size: 16px
+    padding-top: 60px
+    padding-bottom: 60px
+    .top-item
+        display: flex
+        justify-content: space-between
+        .left-item
+            display: flex
+            align-items: center
+    .middle-items
+        display: flex
+        justify-content: space-between
+        a
+            text-decoration: none
+            color: black
+            cursor: pointer
+        h2
+            font-size: 18px
+            font-weight: 600
+        .chunk
+            margin: 20px 0
+            .title
+                font-weight: 600
+            p
+                padding: 0 !important
+.input-btn
+    display: flex
+    align-items: center
+    input
+        background-color: white
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+        outline: none
+        border: 1px solid #ced4da
+        border-right: none
+        width: 100%
+        height: 37px
+        padding: 10px
+        &:focus
+            border: 1px solid black
+    .btn
+        border-radius: 0 5px 5px 0
+        background-color: $primary-color
+        @include center-hor-ver
+        height: 37px
+        border: none
+        outline: none
+        color: white
+        font-size: 14px
+
+.instagram-logo
+    path
+        fill: #000
+    circle: #fff
+    .logo
+        fill: #333
+.social-icons
+    display: flex
+    align-items: center
+
+    a
+        text-decoration: none
+        color: black
+
+        &:hover
+            color: $primary-color
+
+    div
+        @include center-hor-ver
+        margin-right: 10px
+        cursor: pointer
+
+        i
+            font-weight: lighter
+.width-input
+    width: 450px
+.footer-banner
+    display: flex
+    justify-content: space-between
+    .right
+        padding: 10px
+        background-color: #fff2e6
+        @include center-hor-ver
+        width: 40%
+    .left
+        width: 60%
+        height: 279px
+.parallax
+    top: 24px
+    background-attachment: fixed
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+.properties-btn
+    height: 35px
+    width: 100px
+    border-radius: 25px
+    border: 1px solid $primary-color
+    background-color: white
+    color: $primary-color
+    cursor: pointer
+    @include center-hor-ver
+    &:hover
+        background-color: $primary-color
+        color: white
+
+.top-landing-details
+    padding-top: 130px
+    h2
+        font-weight: 800
+        font-size: 30px
+    h4
+        font-weight: 700
+        font-size: 25px
+    p
+        font-weight: 600
+        font-size: 18px
+    .landing-btn
+        height: 35px
+        width: 100px
+        border-radius: 25px
+        background-color: $primary-color
+        color: white
+        cursor: pointer
+        @include center-hor-ver
+.properties-cont
+    padding: 20px 0
+.shk_property
+    @include shadow-shk
+    border-radius: 10px
+    cursor: pointer
+    .image-wrap
+        height: 320px
+        position: relative
+        img
+            opacity: 1
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: .5s ease
+            backface-visibility: hidden
+            border-radius: 10px
+        &:hover img
+            opacity: 0.3
+    .desc
+        padding: 10px
+    .btn-sec
+        padding: 10px
+.cont-one
+    display: flex
+    align-items: center
+    padding: 100px 0 100px 0
+    .details
+        h3
+            font-size: 25px
+            margin-bottom: 50px
+        width: 40%
+        a
+            text-decoration: none
+            color: #666666
+        .chunk
+            color: #666666
+            .title
+                font-weight: 600
+.shk-btns
+    height: 40px
+    border-radius: 20px
+    background-color: $primary-color
+    color: white
+    cursor: pointer
+    @include center-hor-ver
+    border: none
+    outline: none
+    padding: 0 10px
+    &:hover
+        background-color: white
+        color: $primary-color
+        border: 1px solid $primary-color
+.cont-form-wrapper
+    width: 60%
+    border-radius: 8px
+    border: 1px solid $hover-color
+    padding: 15px
+    .form-title
+        display: flex
+        align-items: center
+        margin-bottom: 25px
+        img
+            height: 50px
+            width: 50px
+            margin-right: 15px
+        h2
+            font-weight: 500
+            font-size: 40px
+    .form-container
+        background-color: #f8f9fa
+        padding: 10px
+        border-radius: 8px
+        textarea
+            background-color: white
+            color: #626262
+            border-radius: 8px
+            border: 1px solid #ced4da
+            padding: 10px
+            outline: none
+            cursor: pointer
+            width: 100%
+            &:hover
+                border: 1px solid #626262
+        input
+            border: 1px solid #ced4da
+            background-color: white
+            border-radius: 8px
+            height: 50px
+            width: 100%
+            padding: 10px
+            color: #626262
+            outline: none
+            cursor: pointer
+            &:hover
+                border: 1px solid #626262
+.careers-page
+    padding: 100px 0
+    .title
+        text-align: center
+        margin-bottom: 30px
+    .no-career-wrapper
+        @include center-hor-ver
+        .no-career
+            @include center-hor-ver
+            width: 50%
+            .text-desc
+                @include center-hor-ver
+                font-size: 18px
+            .logo
+                @include center-hor-ver
+.gallery-section
+    padding: 100px 0
+.tab-section
+    min-height: 300px
+    @include shadow-shk
+    padding: 5px
+    border-radius: 5px
+@media only screen and (max-width: 576px)
+    .gallery-section
+        padding: 10px 0
+    .careers-page
+        padding: 10px
+        .title
+            margin-bottom: 10px
+        .no-career-wrapper
+            .no-career
+                width: 100%
+                .text-desc
+                    font-size: 14px
+    .cont-form-wrapper
+        width: 100%
+    .cont-one
+        display: block
+        padding: 30px 10px
+        .details
+            text-align: center
+            width: 100%
+            h3
+                margin-bottom: 10px
+    .top-landing-details
+        padding-top: 90px
+        h2
+            font-weight: 700
+            font-size: 25px
+        h4
+            font-weight: 600
+            font-size: 18px
+        p
+            font-weight: 600
+            font-size: 16px
+    .parallax
+        top: 50px
+    .width-input
+        width: 350px
+    .footer-banner
+        .right
+            width: 100%
+            h2
+                font-size: 27px
+            h4
+                font-size: 20px
+        .left
+            display: none
+    .footer
+        .middle-items
+            display: block
+            justify-content: left
+        .top-item
+            display: block
+            justify-content: left
+
+            .left-item
+                display: block
+                align-items: center
+    .bg-shadow
+        top: 0 !important
+        @include shadow-shk
+    .slim-nav
+        display: none
+    .second-nav
+        //top: 0
+        height: 50px
+
+        .right-items
+            .toggle-text
+                @include center-hor-ver
+
+            .item
+                display: none
