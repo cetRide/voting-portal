@@ -3,7 +3,7 @@
 import './bootstrap'
 import ConfirmationService from 'primevue/confirmationservice';
 import { createApp } from "vue";
-import App from "./App.vue";
+import App from "App.vue";
 import "./assets/styles/app.sass";
 import "primevue/resources/themes/saga-blue/theme.css";
 import "primevue/resources/primevue.min.css";
