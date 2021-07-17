@@ -1,123 +1,71 @@
 <template>
-    <div>
-        <div class="parallax parallax-home">
-            <div class="container">
-                <div data-aos="fade-up" data-aos-duration="2000" class="top-landing-details">
-                    <h2>Superior Homes Kenya</h2>
-                    <h4>East Africa's Leading Master-planned Real Estate Developer</h4>
-                    <p>Superior Homes Kenya is East Africa’s first master-planned real estate developer</p>
-                    <div class="landing-btn">
-                        Learn more
-                    </div>
+    <div class="container">
+        <h2 class="text-center mb-5 tx-pri">Dashboard</h2>
+        <p>
+            <span class="greetings">Good Afternoon Cetric!</span><br>
+            Get a glimpse of whats happening here today.
+        </p>
+        <div class="top-bar">
+            <div class="item-card voter">
+                <div>
+                    <p>9M</p>
+                    <p>Registered Voters</p>
+                </div>
+            </div>
+            <div class="item-card incidents">
+                <div>
+                    <p>498k</p>
+                    <p>Reported Incidents</p>
+                </div>
+            </div>
+            <div class="item-card surveys">
+                <div>
+                    <p>50M</p>
+                    <p>Conducted Surveys</p>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="p-grid properties-cont">
-                <div class="p-col-12 p-2 p-md-6 p-lg-4">
-                    <div data-aos="fade-up" data-aos-duration="1000" class="shk_property">
-                        <div class="image-wrap">
-                            <img :src="green_park" alt="Green Park Estate">
-                        </div>
-                        <div class="desc">
-                            <p>The award-winning Greenpark Estate on Mombasa Road was the first project to be rolled out
-                                and there are now more than 550 houses completed and occupie ...</p>
-                        </div>
-                        <div class="btn-sec">
-                            <div class="properties-btn">
-                                Learn more
-                            </div>
-                        </div>
+        <div>
+            <div class="p-grid">
+                <div class="p-col-12 p-md-6 p-lg-6">
+                    <div class="chart">
+                        <h3 class="title">Registered Voters</h3>
+                        <Voter :height="300"/>
                     </div>
                 </div>
-                <div class="p-col-12 p-2 p-md-6 p-lg-4">
-                    <div data-aos="fade-up" data-aos-duration="1000" class="shk_property">
-                        <div class="image-wrap">
-                            <img :src="vipingo" alt="Pazuri at Vipingo">
-                        </div>
-                        <div class="desc">
-                            <p>Pazuri at Vipingo is a master-planned residential and holiday home estate located in
-                                Vipingo, adjacent to the luxurious Vipingo Ridge. The estate ...</p>
-                        </div>
-                        <div class="btn-sec">
-                            <div class="properties-btn">
-                                Learn more
-                            </div>
-                        </div>
+                <div class="p-col-12 p-md-6 p-lg-6">
+                    <div class="chart">
+                        <h3 class="title">Surveys Conducted</h3>
+                        <Surveys :height="300"/>
                     </div>
                 </div>
-                <div class="p-col-12 p-2 p-md-6 p-lg-4">
-                    <div  data-aos="fade-up" data-aos-duration="1000" class="shk_property">
-                        <div class="image-wrap">
-                            <img :src="fadhili" alt="Green Park Estate">
-                        </div>
-                        <div class="desc">
-                            <p>Fadhili Retirement Village is a purpose-built retirement development comprising one and
-                                two-bedroom bungalows.</p>
-                        </div>
-                        <div class="btn-sec">
-                            <div class="properties-btn">
-                                Learn more
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-col-12 p-2 p-md-6 p-lg-4">
-                    <div data-aos="fade-up" data-aos-duration="1000" class="shk_property">
-                        <div class="image-wrap">
-                            <img :src="lake" alt="Lake Elementaita Mountain Lodges">
-                        </div>
-                        <div class="desc">
-                            <p>Lake Elementaita Mountain Lodges boasts sensational views from sunrise to sunset and
-                                offers guests remarkable standards of accommodation, service, and ...</p>
-                        </div>
-                        <div class="btn-sec">
-                            <div class="properties-btn">
-                                Learn more
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-col-12 p-2 p-md-6 p-lg-4">
-                    <div data-aos="fade-up" data-aos-duration="1000" class="shk_property">
-                        <div class="image-wrap">
-                            <img :src="sundowner" alt="Greenpark Sundowner Hotel">
-                        </div>
-                        <div class="desc">
-                            <p>The Greenpark Sundowner Hotel is the premier choice for world-class accommodation,
-                                conference facilities, food, and a variety of activities.</p>
-                        </div>
-                        <div class="btn-sec">
-                            <div class="properties-btn">
-                                Learn more
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import Voter from './charts/voters'
+import Surveys from './charts/surveys'
+
 export default {
-    name: "home",
-    data() {
-        return {
-            green_park: '/images/shk_properties/GPhomepage.jpg',
-            vipingo: '/images/shk_properties/Pazuri_at_Vipingo.jpg',
-            fadhili: '/images/shk_properties/fadhili.jpg',
-            lake: '/images/shk_properties/lem.jpg',
-            sundowner: '/images/shk_properties/sundowner.jpg',
-        };
+    components: {
+        Voter, Surveys
     },
+    name: "home",
 }
 </script>
 
-<style scoped lang="css">
-.parallax-home {
-    background-image: url('/images/shk_general/Greenpark_SHK_Drone_3.jpg');
-    height: 100vh;
-}
+<style scoped lang="sass">
+.greetings
+    font-size: 20px
+    font-weight: 600
+.voter
+    background-image: linear-gradient(to right top, #d16ba5, #bd77be, #a184d1, #7f90dc, #579adf, #3ea5e3, #21b0e4, #00bae2, #06cbe9, #25dbed, #42ebf0, #5ffbf1)
+
+.incidents
+    background-image: linear-gradient(to right top, #090005, #170610, #200b16, #290e1b, #340f20, #461529, #5a1b32, #6e2139, #912f46, #b43f50, #d85059, #fb645f)
+
+.surveys
+    background-image: linear-gradient(to right top, #6b7d72, #708c80, #739c8f, #75aca1, #76bcb5, #74b1a2, #73a691, #729b80, #6a7356, #574d3c, #392e28, #171313)
 </style>

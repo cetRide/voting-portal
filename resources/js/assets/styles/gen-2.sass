@@ -1,0 +1,88 @@
+@import "variables"
+@import "mixins"
+.top-banner
+    border-bottom-left-radius:  20px
+    border-bottom-right-radius:  20px
+    cursor: pointer
+    @include shadow-shk
+    padding: 0 20px
+    height: 150px
+    margin: 0 100px 50px
+    background-image: linear-gradient(to right top, #92dadb, #a0dad0, #afdac7, #bdd9c2, #cad8c0, #c8d5bf, #c6d1bd, #c4cebc, #b6c7b9, #aac0b6, #9fb9b4, #96b1b1)
+    .label
+        margin-top: 70px
+        font-weight: 600
+        font-size: 20px
+        &:hover
+            color: white
+.second-bar
+    display: flex
+    margin: 0 150px
+    justify-content: space-between
+    .right-item
+        @include shadow-shk
+        width: 38%
+        min-height: 400px
+        border-radius: 10px
+        padding: 10px
+        h5
+            font-weight: 900
+        .list-item
+            cursor: pointer
+            h6
+                font-weight: 500
+            &:hover
+                background-color: ghostwhite
+                h6
+                    color: $primary-color
+            padding: 10px 0
+            display: flex
+            justify-content: left
+            align-items: center
+            img
+                height: 80px
+                width: 80px
+    .left-side
+        width: 60%
+        .item
+            @include shadow-shk
+            margin-bottom: 20px
+            padding: 10px
+            border-radius: 10px
+            .title
+                font-size: 20px
+                font-weight: 600
+            .p
+                font-size: 17px
+            div
+                @include center-hor-ver
+                background-color: $hover-color
+                color: black
+                font-weight: 600
+                font-size: 17px
+                cursor: pointer
+                padding: 10px 0
+                border-radius: 8px
+                margin-top: 20px
+                &:hover
+                    background-color: #bcc0c4
+
+@media only screen and (max-width: 576px)
+    .second-bar
+        margin: 0
+        display: block
+        .right-item
+            width: 100%
+        .left-side
+            width: 100%
+    .top-banner
+        height: 150px
+        margin: 0 0 10px
+
+        h1
+            font-weight: 700
+            font-size: 30px
+            color: $secondary-color
+        .label
+            margin-top: 90px !important
+            font-size: 18px

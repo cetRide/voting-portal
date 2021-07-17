@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Superior Homes Kenya</title>
+    <title>Voter Education</title>
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -54,8 +54,8 @@
         height: 50px;
         border-radius: 50%;
         padding: 3px;
-        background: radial-gradient(farthest-side, #F68D2E 95%, #0000) 50% 0/12px 12px no-repeat,
-        radial-gradient(farthest-side, #0000 calc(100% - 5px), #F68D2E calc(100% - 4px)) content-box;
+        background: radial-gradient(farthest-side, #2196f3 95%, #0000) 50% 0/12px 12px no-repeat,
+        radial-gradient(farthest-side, #0000 calc(100% - 5px), #2196f3 calc(100% - 4px)) content-box;
         animation: s6 2s infinite;
     }
 
@@ -84,7 +84,7 @@
     <div class="initial-render">
         <div class="content-wrap">
             <div>
-                <div class="brand-name">Superior Homes Kenya</div>
+                <div class="brand-name">Voter Education</div>
                 <div style="display: flex; align-items: center; justify-content: center">
                     <div>
                         <div id="spinner"></div>
@@ -96,7 +96,7 @@
         <div class="loader-footer">
             Copyright &#169;
             <script type="text/javascript"> document.write(new Date().getFullYear())</script>
-            Superior Homes Kenya Plc.
+            Voter Education.
         </div>
     </div>
 

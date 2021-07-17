@@ -1,5 +1,4 @@
 import {createRouter, createWebHistory} from "vue-router";
-import Home from "../components/home";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 
@@ -7,113 +6,42 @@ const routes = [
     {
         path: "/",
         name: "home",
-        component: Home,
+        component: import("../components/home"),
         meta: {
-            title: "Superior Homes Kenya | Home",
-            metaTags: [
-                {
-                    name: "description",
-                    content: "The Home page of superior homes website.",
-                },
-                {
-                    property: "og:description",
-                    content: "The Home page of superior homes website.",
-                },
-            ],
+            title: "Voter Edu | Home",
         },
     },
     {
-        path: "/contact-us",
-        name: "contact",
-        component: () => import("../components/contact"),
+        path: "/voting-simulation",
+        name: "vote",
+        component: () => import("../components/voting/voting-mock-up"),
         meta: {
-            title: "Superior Homes Kenya | Contact Us",
-            metaTags: [
-                {
-                    name: "description",
-                    content: "The Contact us page of superior homes website.",
-                },
-                {
-                    property: "og:description",
-                    content: "The Contact us page of superior homes website.",
-                },
-            ],
+            title: "Voter Edu | Cast Vote",
         },
     },
     {
-        path: "/careers",
-        name: "careers",
-        component: () => import("../components/careers"),
+        path: "/view-stations-pins",
+        name: "polling stations",
+        component: () => import("../components/voting/poling-pins"),
         meta: {
-            title: "Superior Homes Kenya | Careers",
-            metaTags: [
-                {
-                    name: "description",
-                    content: "The Careers page of superior homes website.",
-                },
-                {
-                    property: "og:description",
-                    content: "The Careers page of superior homes website.",
-                },
-            ],
+            title: "Voter Edu | Polling Stations",
         },
     },
     {
-        path: "/about",
-        name: "about",
-        component: () => import("../components/about"),
+        path: "/events",
+        name: "events",
+        component: () => import("../components/events/calendar"),
         meta: {
-            title: "Superior Homes Kenya | About us",
-            metaTags: [
-                {
-                    name: "description",
-                    content: "The Home page of superior homes website.",
-                },
-                {
-                    property: "og:description",
-                    content: "The Home page of superior homes website.",
-                },
-            ],
+            title: "Voter Edu | Events",
         },
     },
     {
-        path: "/gallery",
-        name: "gallery",
-        component: () => import("../components/gallery/index"),
+        path: "/information-center",
+        name: "information center",
+        component: () => import("../components/voting/voter-info-center"),
         meta: {
-            title: "Superior Homes Kenya | Gallery",
-            metaTags: [
-                {
-                    name: "description",
-                    content: "The Gallery page of superior homes website.",
-                },
-                {
-                    property: "og:description",
-                    content: "The Gallery page of superior homes website.",
-                },
-            ],
+            title: "Voter Edu | Events",
         },
-        // children: [
-        //     {
-        //         path: "/dashboard",
-        //         name: "Home",
-        //         component: () => import("../components/home/index"),
-        //         meta: {
-        //             title: "Tanda | Home",
-        //             metaTags: [
-        //                 {
-        //                     name: "description",
-        //                     content: "The Dashboard of Tanda Africa card issuing dashboard.",
-        //                 },
-        //                 {
-        //                     property: "og:description",
-        //                     content: "The Dashboard of Tanda Africa card issuing dashboard.",
-        //                 },
-        //             ],
-        //         },
-        //
-        //     },
-        // ],
     },
 ];
 
